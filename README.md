@@ -5,7 +5,7 @@ A simple project to play videos in terminal.
 - Play a video in terminal
 
 ## Screencasts
-![bad apple](screencast/bad_apple.gif)
+<video src="screencast/bad_apple.mov" width="320" controls></video>
 
 ## Usage
 ### Install dependencies
