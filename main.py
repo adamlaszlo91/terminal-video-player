@@ -13,7 +13,7 @@ def image_to_text(image: np.ndarray) -> str:
         text += '\n'
         for k in range(image.shape[1]):
             greyscale_value = image[i][k]
-            char_index = round((greyscale_value / 256) * (len(ascii_chars) ))
+            char_index = int((greyscale_value / 256) * (len(ascii_chars) ))
             text += ascii_chars[char_index]
     return text
 
