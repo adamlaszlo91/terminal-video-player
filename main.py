@@ -18,6 +18,10 @@ def image_to_text(image: np.ndarray) -> str:
     return text
 
 
+def reset_cursor(height: int) -> None:
+    print(f'\033[{height}A', flush=True)
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         print('Please provide the video path.')
@@ -43,6 +47,8 @@ def main() -> None:
 
         image_as_text = image_to_text(image)
         print(image_as_text, end='', flush=True)
+        reset_cursor(height=image.shape[1])
+
         time.sleep(0.04)
 
 
